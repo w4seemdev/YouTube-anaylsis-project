@@ -1,0 +1,66 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background / panel gradient -->
+    <linearGradient id="bg" x1="64" y1="40" x2="448" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1B1E"></stop>
+      <stop offset="1" stop-color="#0F1115"></stop>
+    </linearGradient>
+
+    <!-- Bars gradient (purple -> red) -->
+    <linearGradient id="bars" x1="140" y1="300" x2="320" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6F4AE6"></stop>
+      <stop offset="1" stop-color="#FF3B5C"></stop>
+    </linearGradient>
+
+    <!-- Play button gradient (red) -->
+    <linearGradient id="play" x1="328" y1="340" x2="440" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF2D55"></stop>
+      <stop offset="1" stop-color="#FF5A3C"></stop>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="coloredBlur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Browser window -->
+  <rect x="56" y="64" width="400" height="384" rx="28" fill="url(#bg)" stroke="#2B2F36" stroke-width="8"></rect>
+
+  <!-- Top bar -->
+  <rect x="56" y="64" width="400" height="64" rx="28" fill="#15171B"></rect>
+  <rect x="56" y="96" width="400" height="32" fill="#15171B"></rect>
+
+  <!-- Top bar dots -->
+  <circle cx="96" cy="96" r="8" fill="#FF5A3C"></circle>
+  <circle cx="124" cy="96" r="8" fill="#F6C445"></circle>
+  <circle cx="152" cy="96" r="8" fill="#4CD964"></circle>
+
+  <!-- Chart area panel -->
+  <rect x="88" y="152" width="336" height="240" rx="18" fill="#111318" stroke="#23262D" stroke-width="4"></rect>
+
+  <!-- Grid lines -->
+  <g opacity="0.35" stroke="#2C3038" stroke-width="3">
+    <line x1="112" y1="208" x2="400" y2="208"></line>
+    <line x1="112" y1="268" x2="400" y2="268"></line>
+    <line x1="112" y1="328" x2="400" y2="328"></line>
+  </g>
+
+  <!-- Bars -->
+  <g fill="url(#bars)">
+    <rect x="132" y="300" width="44" height="72" rx="8"></rect>
+    <rect x="200" y="260" width="44" height="112" rx="8"></rect>
+    <rect x="268" y="220" width="44" height="152" rx="8"></rect>
+    <rect x="336" y="188" width="44" height="184" rx="8"></rect>
+  </g>
+
+  <!-- Play button badge -->
+  <g filter="url(#glow)">
+    <rect x="304" y="316" width="120" height="96" rx="22" fill="url(#play)"></rect>
+    <polygon points="352,344 352,384 388,364" fill="white"></polygon>
+  </g>
+</svg>
