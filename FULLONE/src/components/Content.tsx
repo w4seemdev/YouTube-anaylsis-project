@@ -133,7 +133,7 @@ const Content = () => {
                 <a
                   href={video.url}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="truncate text-[11px] text-indigo-500 hover:underline"
                 >
                   {video.url}
